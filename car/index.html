@@ -20,6 +20,11 @@
 
         #container img {
             width: 100%;
+            visibility: hidden;
+        }
+
+        #container img.shown {
+            visibility: visible;
         }
 
         #container h1 {
@@ -47,7 +52,7 @@
 
 
     <div id="container">
-        <img src="./carro.gif">
+        <img src="./carro.gif" id="carro">
         <h1>¡¡¡FELIZ CUMPLEAÑOS!!!</h1>
         <main></main>
     </div>
@@ -73,7 +78,7 @@
         const WIDTH = canvasContainer.width(),
               HEIGHT = canvasContainer.height();
 
-        let hasShowableCuadro = false;
+        const imgEl = $("#carro");
 
         let regalo, carro;
 
@@ -88,6 +93,9 @@
             
             image(regalo, 0, 0, width, height);
             noLoop();
+            requestAnimationFrame(() => {
+                imgEl.addClass('shown');
+            })
         }
 
 
