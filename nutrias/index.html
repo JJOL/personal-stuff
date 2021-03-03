@@ -72,16 +72,19 @@
             bg.image(back1, 0, 0, width, height);
             eg = createGraphics(width, height);
             cg = createGraphics(width, height);
-            textSize(45);
         }
-
+        
         function draw() {
             clear();
             image(backScene, 0, 0, width, height);
             image(comand2, 0, 0, 300, 500);
             image(comand1, 800, 100, 300, 500);
             fill(255);
+            textSize(45);
             text("Felicidades soldado, sobrevivió otro año", 100, HEIGHT-100);
+            textSize(15);
+            text("Cas y JJ", WIDTH-100, HEIGHT-20);
+
 
             image(bg, 0, 0, width, height);
             image(eg, 0, 0, width, height);
